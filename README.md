@@ -2,7 +2,7 @@
 A quick and dirty shell script to log the calls from Aastra/Mitel Office 400 (or any other Aastra/Mitel communication server which reports calls in OIP format) to MySQL.
 
 ## How it works.
-The communication server (CS) has to be configured to send call information in OIP format to a this script which listens on TCP port 1080 (default) and inserts the information into a MySQL table.
+The communication server (CS) has to be configured to send call information in OIP format to this script which listens on TCP port 1080 (default) and inserts the information into a MySQL table.
 
 ## Setup
 1. Create a MySQL table `callog` with the following rows:
@@ -57,4 +57,4 @@ The communication server (CS) has to be configured to send call information in O
 	8. Expand *Settings* and set the *Enter ICL data* checkbox and hit the *Apply* button.
 6. Done.
 
-From now on the CS connects to the listening calloh.sh script and sends the data. The script writes the data into the MySQL table and logs it to syslog also.
+From now on the CS connects to the listening callog.sh script and sends the data. The script writes the data into the MySQL table and logs it to syslog also.
